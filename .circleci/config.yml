@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  Reactzz:
+  Reactzzx:
     resource_class: large
     docker:
       - image: docker:18.06.3-ce-git
@@ -13,7 +13,7 @@ jobs:
           command: |
             docker run -e CI=true ulminase/hello-world:latest
       ###############################################################
-  Expresszz:
+  Expresszzx:
       resource_class: large
       docker:
         - image: docker:18.06.3-ce-git
@@ -25,7 +25,7 @@ jobs:
             no_output_timeout : 1h
             command: |
               docker run -e CI=true ulminase/hello-world:latest
-  React1zz:
+  React1zzx:
     resource_class: large
     docker:
       - image: docker:18.06.3-ce-git
@@ -38,7 +38,7 @@ jobs:
           command: |
             docker run -e CI=true ulminase/hello-world:latest
       
-  Express1zz:
+  Express1zzx:
       resource_class: large
       docker:
         - image: docker:18.06.3-ce-git
@@ -50,7 +50,7 @@ jobs:
             no_output_timeout : 1h
             command: |
               docker run -e CI=true ulminase/hello-world:latest
-  React2zz:
+  React2zzx:
     resource_class: large
     docker:
       - image: docker:18.06.3-ce-git
@@ -70,31 +70,31 @@ workflows:
   version: 2
   build_test_feature:
     jobs:
-      - Reactzz:
+      - Reactzzx:
           filters:
             branches:
               ignore:
                 - main
                 - master
-      - Expresszz:
+      - Expresszzx:
           filters:
             branches:
               ignore:
                 - main
                 - master
-      - React1zz:
+      - React1zzx:
           filters:
             branches:
               ignore:
                 - main
                 - master
-      - Express1zz:
+      - Express1zzx:
           filters:
             branches:
               ignore:
                 - main
                 - master
-      - React2zz:
+      - React2zzx:
           filters:
             branches:
               ignore:
